@@ -14,7 +14,7 @@
 import argparse
 import Tkinter as tk
 import os
-from shutil import copyfile
+from shutil import copyfile, move
 from PIL import ImageTk, Image
 
 class ImageGui:
@@ -144,13 +144,25 @@ class ImageGui:
         subdirectory called label in the input folder.
         :param input_path: Path of the original image
         :param label: The label
-        :return:
         """
         root, file_name = os.path.split(input_path)
         output_path = os.path.join(root, label, file_name)
-        #print "cp %s %s" % (input_path, output_path)
         print " %s --> %s" % (file_name, label)
         copyfile(input_path, output_path)
+
+    @staticmethod
+    def _move_image(input_path, label):
+        """
+        Moves a file to a new label folder using the shutil library. The file will be moved into a
+        subdirectory called label in the input folder. This is an alternative to _copy_image, which is not
+        yet used, function would need to be replaced above.
+        :param input_path: Path of the original image
+        :param label: The label
+        """
+        root, file_name = os.path.split(input_path)
+        output_path = os.path.join(root, label, file_name)
+        print " %s --> %s" % (file_name, label)
+        move(input_path, output_path)
 
 
 def make_folder(directory):
