@@ -65,6 +65,7 @@ class ImageGui:
                     tk.Button(frame, text=label, width=10, height=1, command=lambda l=label: self.vote(l))
             )
 
+        # Add progress label
         progress_string = "%d/%d" % (self.index, self.n_paths)
         self.progress_label = tk.Label(frame, text=progress_string, width=5)
 
