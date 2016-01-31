@@ -4,7 +4,7 @@ by the user based on a GUI generated on-the-fly using Tkinter.
 The only requirement not already packaged with python is the `Pillow` 
 library.
 
-Usage
+Usage:
 
     python sort_folder.py 
         --folder <INPUT-FOLDER> 
