@@ -178,8 +178,8 @@ if __name__ == "__main__":
 
     # Make input arguments
     parser = argparse.ArgumentParser()
-    parser.add_argument('-f', '--folder', help='Input folder where the *tif images should be')
-    parser.add_argument('-l', '--labels', nargs='+', help='Possible labels in the images')
+    parser.add_argument('-f', '--folder', help='Input folder where the *tif images should be', required=True)
+    parser.add_argument('-l', '--labels', nargs='+', help='Possible labels in the images', required=True)
     args = parser.parse_args()
 
     # grab input arguments from args structure
