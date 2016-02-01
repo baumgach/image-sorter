@@ -193,7 +193,7 @@ if __name__ == "__main__":
     # Put all image file paths into a list
     paths = []
     for file in os.listdir(input_folder):
-        if file.endswith(".tif"):
+        if file.endswith(".tif") or file.endswith(".tiff"):
 
             path = os.path.join(input_folder, file)
             paths.append(path)
