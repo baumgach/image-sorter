@@ -67,7 +67,7 @@ class ImageGui:
 
         # Add progress label
         progress_string = "%d/%d" % (self.index, self.n_paths)
-        self.progress_label = tk.Label(frame, text=progress_string, width=5)
+        self.progress_label = tk.Label(frame, text=progress_string, width=10)
 
         # Place buttons in grid
         for ll, button in enumerate(self.buttons):
